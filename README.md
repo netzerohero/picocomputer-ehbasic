@@ -1,6 +1,6 @@
 # RP6502 - Enhanced 6502 BASIC
 
-Referfence manual and more information archived here:<br>
+Reference manual and more information archived here:<br>
 http://retro.hansotten.nl/6502-sbc/lee-davison-web-site/enhanced-6502-basic/
 
 You must have on your development system:
