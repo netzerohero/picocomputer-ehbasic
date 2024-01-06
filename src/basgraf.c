@@ -4,7 +4,9 @@
  *
  * Functions:
  * 
- *     init_bitmap_graphics() - Setup bitmap display for 320 x 180 8-bit-per-pixel. 
+ *     init_bitmap_graphics() - Setup bitmap display for either: 
+ *                              0x00: 320h x 180v x 8-bit-per-pixel graphing canvas
+ *                              0xFF: 320h x 240v x 4-bit-per-pixel
  *         erase_canvas(void) - Clears the bitmapped display.
  *    draw_pixel(x, y, color) - Draws a pixel at position x,y of color
  *        init_console_text() - Setup display for console/text; clear it.
