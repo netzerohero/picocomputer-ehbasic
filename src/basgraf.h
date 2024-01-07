@@ -4,7 +4,10 @@
  *
  * Function headers for:
  * 
- *     init_bitmap_graphics() - Setup bitmap display for 1-of-2-modes: 320 x 180||240 x 8|4-bpp; clear it. 
+ *     init_bitmap_graphics(dimension) - Setup bitmap display; clear it. 
+ *                              for either:
+ *                                0x00: 320 x 180  8-bit-per-pixel
+ *                                0xFF: 320 x 240  4-bit-per-pixel
  *         erase_canvas(void) - Clears the bitmapped display.
  *    draw_pixel(x, y, color) - Draws a pixel at position x,y of color
  *        init_console_text() - Setup display for console/text; clear it.
@@ -76,10 +79,14 @@ void init_bitmap_graphics(uint16_t canvas_struct_address,
                           uint8_t  bits_per_pixel);
 #endif /*0*/
 
-#define V180_H320_8BPP 0x00 //320h x 180v x 8-bpp-color 
-#define V240_H320_4BPP 0XFF //320H X 240V X 4-bpp-color
+/* #defines for desired screen dimension */
+#define V180_H320_8BPP 0x00
+#define V240_H320_4BPP 0xFF
 
-void init_bitmap_graphics(void);
+#define HSIZE 320 /* always 320 for our use-case */
+#define HMAX  ( HSIZE - 1 ) /* max x-pixel */
+
+void init_bitmap_graphics(uint8_t dimension);
 void erase_canvas(void);
 void draw_pixel(uint16_t x, uint16_t y, uint16_t color);
 
