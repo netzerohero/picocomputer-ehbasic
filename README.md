@@ -33,5 +33,5 @@ The commands are:
 Assumptions / Limitations:
 
     * HPLOT targets (only) the two screen-modes listed above on the rp6502's pico-VGA.
-    * The x-coordinate from EhBasic is limited to values >= 255 (8-bits). This is a 
+    * The x-coordinate from EhBasic is limited to values <= 255 (8-bits). This is a 
       limitation of parameters following the 'CALL' EhBASIC keyword.
