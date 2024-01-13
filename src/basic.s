@@ -47,8 +47,11 @@
 ; p6.1  alter 2.22p5 5.3 to make compatible with cc65 linking.
 ; p6.2  removed use of page 2; moved cc* to zp, moved Ibuff to cc65 memory.
 
-.exportzp LAB_WARM, IrqBase, NmiBase
-.export LAB_COLD, LAB_FCER
+
+
+.exportzp LAB_WARM, IrqBase, NmiBase, Dtypef
+.export LAB_COLD, LAB_FCER, LAB_14BD, LAB_EVEX, LAB_SNER, LAB_22B6, LAB_1463, LAB_RMSG
+
 .export LAB_SCGB
 
 .import V_INPT, V_OUTP, V_LOAD, V_SAVE, V_USR
@@ -998,7 +1001,10 @@ LAB_134B:
       JSR   V_OUTP            ; erase the character
       LDA   #$08
       JSR   LAB_PRNA          ; go print the character
+      TXA
+      BEQ   LAB_134B_sol      ; unless at the start of line
       DEX                     ; decrement the buffer counter (delete)
+LAB_134B_sol:
       .byte $2C               ; make LDX into BIT abs
 
 ; call for BASIC input (main entry point)
