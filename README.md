@@ -13,13 +13,17 @@ $ pip install pyserial
 ```
 
 # Initial plotting enhancements for the RP6502 Picocomputer's EhBASIC
-Plotting-enhancements work with the 12-Jan-2024 EhBASIC+save/load in the master
+
+Plotting-enhancements work with the 12&13-Jan-2024 EhBASIC+save/load in the master
 picocomputer repo (rev: 8583e72).
+
 
 Four new commands are available using EhBasic's "CALL" keyword. 
 CALL addresses supplied are from the mapfile. 
 Plotting command is callable from EhBASIC.
+
 Two plotting screen dimensions are supported.
+
 
 The commands are:
 
