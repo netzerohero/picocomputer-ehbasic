@@ -1,4 +1,7 @@
-# RP6502 - Enhanced 6502 BASIC
+# RP6502 - Enhanced EhBASIC Plus (EBP) - Experimental
+
+For a stable version of EhBASIC for the RP6502 use the official:
+https://github.com/picocomputer/ehbasic
 
 Reference manual and more information archived here:<br>
 http://retro.hansotten.nl/6502-sbc/lee-davison-web-site/enhanced-6502-basic/
@@ -14,16 +17,14 @@ $ pip install pyserial
 
 # Initial plotting enhancements for the RP6502 Picocomputer's EhBASIC
 
-Plotting-enhancements work with the 12&13-Jan-2024 EhBASIC+save/load in the master
-picocomputer repo (rev: 8583e72).
-
+Working plotting-enhancements coupled with the 12&13-Jan-2024 EhBASIC+save/load mods from the master
+picocomputer EhBASIC repo. 
 
 Four new commands are available using EhBasic's "CALL" keyword. 
 CALL addresses supplied are from the mapfile. 
 Plotting command is callable from EhBASIC.
 
 Two plotting screen dimensions are supported.
-
 
 The commands are:
 
@@ -34,8 +35,10 @@ The commands are:
     * TEXTMODE - return VGA-screen back to console/text mode
     * CLS (or HOME) - clear the console/text screen.
 
-Assumptions / Limitations:
+Assumptions / Limitations / Notes:
 
     * HPLOT targets (only) the two screen-modes listed above on the rp6502's pico-VGA.
     * The x-coordinate from EhBasic is limited to values <= 255 (8-bits). This is a 
       limitation of parameters following the 'CALL' EhBASIC keyword.
+    * EhBASIC's executable's origin-address: $C000.  
+    * 48639-bytes reported available to the user.
