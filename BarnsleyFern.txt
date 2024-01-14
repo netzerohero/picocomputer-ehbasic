@@ -6,11 +6,10 @@
  
  50 REM Addresses for our four new functions from mapfile:
 
- 55 LET      HGR = $E9A8  : REM F_HGR->init_bitmap_graphics()
- 60 LET    HPLOT = $E9B0  : REM F_HPLOT->draw_pixel()
- 65 LET TEXTMODE = $E9EC  : REM F_TEXT->init_console_text()
- 70 LET     HOME = $E9F0  : REM F_CLS->cls()
-=======
+ 55 LET      HGR = $E9AB  : REM F_HGR->init_bitmap_graphics()
+ 60 LET    HPLOT = $E9B3  : REM F_HPLOT->draw_pixel()
+ 65 LET TEXTMODE = $E9EF  : REM F_TEXT->init_console_text()
+ 70 LET     HOME = $E9F3  : REM F_CLS->cls()
 
  75 LET      CLS = HOME   : REM cls()
  82 LET    GREEN = 10     : REM Green ON EHBASIC HPLOT 
